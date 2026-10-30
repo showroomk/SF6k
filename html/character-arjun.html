@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アルジュン（キャラクター詳細） | SF6 攻略ガイド</title>
+  <meta name="description" content="アルジュンの立ち回り方針、技コマンド、コンボ、生ラッシュ、セットプレイ（有利フレーム・重ね技）。">
+  <meta name="theme-color" content="#050508">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Chakra+Petch:wght@500;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=20261010">
+</head>
+<body>
+
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-splash bg-splash--purple"></div>
+    <div class="bg-splash bg-splash--cyan"></div>
+    <div class="bg-splash bg-splash--pink"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <!-- ===== 共通ヘッダー ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="SF6 攻略ガイド トップへ">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M6 30 L18 6 L22 16 L34 10 L24 34 L20 24 Z"/></svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-main">SF6</span>
+          <span class="logo-sub">攻略ガイド</span>
+        </span>
+      </a>
+      <button class="menu-btn" id="menuBtn" type="button"
+              aria-controls="drawer" aria-expanded="false" aria-label="メニューを開く">
+        <span class="menu-btn-label">MENU</span>
+        <span class="menu-btn-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== ドロワーメニュー ===== -->
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <nav class="drawer" id="drawer" aria-label="サイトメニュー" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="drawer-title">MENU</span>
+      <button class="drawer-close" id="drawerClose" type="button" aria-label="メニューを閉じる">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 L19 19 M19 5 L5 19"/></svg>
+      </button>
+    </div>
+    <ol class="drawer-list">
+      <li><a href="../index.html" class="drawer-link"><span class="drawer-no">00</span><span class="drawer-name">トップページ</span><span class="drawer-en">HOME</span></a></li>
+      <li><a href="rules.html" class="drawer-link"><span class="drawer-no">01</span><span class="drawer-name">ゲームルール</span><span class="drawer-en">RULES</span></a></li>
+      <li><a href="modes.html" class="drawer-link"><span class="drawer-no">02</span><span class="drawer-name">各モードの遊び方</span><span class="drawer-en">MODES</span></a></li>
+      <li><a href="ranks.html" class="drawer-link"><span class="drawer-no">03</span><span class="drawer-name">ランクについて</span><span class="drawer-en">RANK</span></a></li>
+      <li><a href="controls.html" class="drawer-link"><span class="drawer-no">04</span><span class="drawer-name">基本操作方法</span><span class="drawer-en">CONTROLS</span></a></li>
+      <li><a href="characters.html" class="drawer-link is-current" aria-current="page"><span class="drawer-no">05</span><span class="drawer-name">キャラクター選択</span><span class="drawer-en">CHARACTERS</span></a></li>
+      <li><a href="history.html" class="drawer-link"><span class="drawer-no">06</span><span class="drawer-name">ストリートファイターの歴史</span><span class="drawer-en">HISTORY</span></a></li>
+      <li><a href="diary.html" class="drawer-link"><span class="drawer-no">07</span><span class="drawer-name">投稿主の日記</span><span class="drawer-en">DIARY</span></a></li>
+    </ol>
+  </nav>
+
+  <main class="main" id="main">
+
+    <!-- データ元：sf6-pdf/data/arjun.json（アルジュン 立ち回り＆コンボ資料） -->
+    <section class="chara-hero">
+      <div>
+        <nav class="breadcrumb reveal" aria-label="パンくずリスト">
+          <a href="../index.html">TOP</a><span aria-hidden="true">/</span>
+          <a href="characters.html">キャラクター選択</a><span aria-hidden="true">/</span><span>アルジュン</span>
+        </nav>
+        <p class="chara-name-en reveal" aria-hidden="true">ARJUN</p>
+        <h1 class="page-title reveal">アルジュン</h1>
+        <p class="page-lead reveal">必殺技による大量の白ダメージ（回復可能ダメージ）で相手に圧をかける新しいタイプのキャラクター。弾や岩の設置をガードさせて白ダメージを貯め、コマンド投げや小技1発で一気に回収する。攻めている時は火力が高い一方、守りの手段に乏しい。</p>
+        <div class="chara-stats reveal">
+          <div class="chara-stat"><small>TYPE</small><b>白ダメージ・設置</b></div>
+          <div class="chara-stat"><small>DIFFICULTY</small><b>やや高め</b><div class="meter" aria-label="難易度 5段階中4"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+          <div class="chara-stat"><small>DATA</small><b>コンボ10・連携6</b></div>
+        </div>
+      </div>
+      <!-- 画像の位置・フェードは style の値で調整できます -->
+      <figure class="media reveal" style="--img-y: 15%; --img-zoom: 1; --img-shift: 0px; --fade-top: 18%; --fade-bottom: 45%; --fade-left: 14%; --fade-right: 14%;">
+        <div class="media-frame" data-label="アル"><img src="../images/characters/arjun.png" alt="アルジュン" loading="lazy"></div>
+      </figure>
+    </section>
+
+    <div class="page-layout">
+      <aside class="toc" aria-label="このページの目次">
+        <p class="toc-title">INDEX</p>
+        <nav><ol>
+            <li><a href="#overview">概要・立ち回り方針</a></li>
+            <li><a href="#moves">技・コマンド</a></li>
+            <li><a href="#combos">コンボ</a></li>
+            <li><a href="#rush">生ラッシュ行動</a></li>
+            <li><a href="#setplay">セットプレイ・起き攻め</a></li>
+            <li><a href="#source">出典・用語</a></li>
+        </ol></nav>
+      </aside>
+
+      <article class="article">
+
+        <!-- ① 概要・立ち回り -->
+        <section class="doc-section reveal" id="overview">
+          <div class="sec-head"><span class="sec-no">01</span><h2 class="sec-title">概要・立ち回り方針</h2><span class="sec-en">OVERVIEW</span></div>
+
+          <h3>ODゲージがある時</h3>
+          <ul class="list"><li>OD神気の巨巌（設置）は空中コンボのつなぎに使え、厳酷な岩肩で岩を投げる高火力ルートに行ける。</li><li>弱P×2からキャンセルラッシュ→しゃがみ弱P→中K&gt;強K（規律の躍動）で、ヒット後密着+3。投げと打撃の二択を迫りつつ、後ろ下がりからシミーもできる強い状況。</li><li>ラッシュから仕掛けるならしゃがみ中Kのみ。ラッシュ中段は相手がダウンしてコンボにならない。</li></ul>
+          <h3>ODゲージがない時</h3>
+          <ul class="list"><li>弾（息吹の円筒）や岩設置（神気の巨巌）をガードさせて白ダメージをコツコツ蓄積し、取るべき時にドカッと取る。</li><li>大義の巨腕は弱・中ならガード-2で反撃がなく入れ込みOK。強はガード+2で読み合いを仕掛けられる。</li><li>大義の巨腕の派生（→+P 追撃）の間は4F技で割り込まれるので注意。割り込まれるならジャストパリィを狙い、中攻撃以上で反撃してくる相手には派生の出し切りがカウンターヒットする読み合いになる。</li></ul>
+          <h3>差し合い</h3>
+          <ul class="list"><li>白ダメージを取った時の火力が抜群。白ゲージで1800〜2000程度取った後、小技1発で約2500回収できる。</li><li>コマンド投げ（鬼気迫る尋問）は基本的に白ダメージしか与えないが、すでに白ダメージがあればそれを回収し、さらに追加ダメージを与える。</li><li>相手から見ると「コマ投げも嫌だが、弱P1発も嫌」という圧をかけられる。</li><li>岩設置後の突進（厳酷な岩肩）で岩を投げられるとそれだけで大ダメージ。ガードでも1500〜1800ほど白ダメージを取れる。</li><li>弾は持っているが、弾キャラ相手に弾だけで打ち勝つのは難しい（ノイズ作り程度）。</li></ul>
+          <h3>対空</h3>
+          <ul class="list"><li>しゃがみ強Pが対空技と思われるが発生が遅く、負けたり潰されたりする場面が多い。</li><li>地上で落とすより、相手の飛びを見て空対空で対処するのがメイン。</li></ul>
+          <h3>画面端</h3>
+          <ul class="list"><li>画面端が近ければ、無敵技ガード後などのコンボをSA1〜SA3の好きなSAで締められる。</li><li>OD設置後の岩肩を強にすると画面位置を入れ替えられる（画面端を背負った時に有効）。</li></ul>
+          <div class="pros-cons">
+            <div class="pros"><h4>強み</h4><ul class="list"><li>白ダメージを取った時の火力が非常に高い。</li><li>コマンド投げだけでなく打撃（小技1発）でも白ダメージを回収でき、火力の圧が出せる。</li><li>岩設置の圧力。突進から岩を投げられるとガードでも大量の白ダメージ。</li><li>当て身（不撓の警衛）は打撃に自動反撃し弾も無効化。ドライブインパクトも弾き返し、白ダメージも受けない。</li></ul></div>
+            <div class="cons"><h4>弱み</h4><ul class="list"><li>対空がきつい（しゃがみ強Pの発生が遅い）。</li><li>守りの手段に乏しく、無敵技での切り返しができない。</li><li>弾キャラ相手に弾の撃ち合いで勝つのは難しい。</li><li>攻められると途端に苦しい立ち回りを強いられる。</li></ul></div>
+          </div>
+        </section>
+
+        <!-- ② 技 -->
+        <section class="doc-section reveal" id="moves">
+          <div class="sec-head"><span class="sec-no">02</span><h2 class="sec-title">技・コマンド（クラシック）</h2><span class="sec-en">MOVES</span></div>
+          <p>公式コマンドリストで確認したコマンドです。（溜め）＝溜め入力、一回転＝レバー1回転。</p>
+          <div class="table-wrap"><table class="data-table">
+            <thead><tr><th>技名</th><th>コマンド</th><th>備考</th></tr></thead>
+            <tbody><tr><td><b>大義の巨腕</b></td><td><span class="cmd">↓↘→+P</span></td><td>弱中はガード-2、強は+2</td></tr><tr><td><b>追撃</b></td><td><span class="cmd">→+P</span></td><td>大義の巨腕中に</td></tr><tr><td><b>厳酷な岩肩</b></td><td><span class="cmd">→↓↘+P</span></td><td>弱中はガード-4</td></tr><tr><td><b>過剰な正義</b></td><td><span class="cmd">（自動派生）</span></td><td>厳酷な岩肩で岩に触れると発動</td></tr><tr><td><b>息吹の円筒</b></td><td><span class="cmd">↓↘→+K</span></td><td>設置系の飛び道具</td></tr><tr><td><b>息吹の震撼</b></td><td><span class="cmd">→+P</span></td><td>息吹の円筒中に</td></tr><tr><td><b>神気の巨巌</b></td><td><span class="cmd">↓↙←+K</span></td><td>岩の設置。ボタンホールドで出現タイミング変化</td></tr><tr><td><b>鬼気迫る尋問</b></td><td><span class="cmd">→↘↓↙←+P</span></td><td>コマンド投げ（近距離）</td></tr><tr><td><b>不撓の警衛</b></td><td><span class="cmd">↓↓+強K</span></td><td>当て身。ボタンホールドで動作継続</td></tr><tr><td><b>倫理の崩壊</b></td><td><span class="cmd">P</span></td><td>不撓の警衛中に</td></tr><tr><td><b>SA1 破壊の蛮声</b></td><td><span class="cmd">↓↘→↓↘→+K</span></td><td>—</td></tr><tr><td><b>SA2 忘却の一槌</b></td><td><span class="cmd">↓↙←↓↙←+P</span></td><td>—</td></tr><tr><td><b>SA3 秩序の鬼神</b></td><td><span class="cmd">↓↘→↓↘→+P</span></td><td>体力25%以下で性能アップ</td></tr><tr><td><b>仁義の一刀</b></td><td><span class="cmd">→+強P</span></td><td>—</td></tr><tr><td><b>頑強な跳舞</b></td><td><span class="cmd">→+強K</span></td><td>—</td></tr><tr><td><b>規律の躍動</b></td><td><span class="cmd">中K &gt; 強K</span></td><td>ターゲットコンボ（動画内「中Ktc」）</td></tr><tr><td><b>不敵の調べ</b></td><td><span class="cmd">強P &gt; 強P</span></td><td>—</td></tr><tr><td><b>鎮圧</b></td><td><span class="cmd">強P &gt; 強P &gt; 強P</span></td><td>—</td></tr><tr><td><b>追跡</b></td><td><span class="cmd">強P &gt; 強P &gt; 強K</span></td><td>—</td></tr><tr><td><b>無情の拳</b></td><td><span class="cmd">強K &gt; 強P</span></td><td>ボタンホールドで性質変化</td></tr><tr><td><b>豪胆な制裁</b></td><td><span class="cmd">N or →+弱P弱K</span></td><td>通常投げ</td></tr><tr><td><b>処罰の天秤</b></td><td><span class="cmd">←+弱P弱K</span></td><td>通常投げ</td></tr></tbody>
+          </table></div>
+        </section>
+
+        <!-- ③ コンボ -->
+        <section class="doc-section reveal" id="combos">
+          <div class="sec-head"><span class="sec-no">03</span><h2 class="sec-title">コンボ</h2><span class="sec-en">COMBOS</span></div>
+
+          <p>始動技の種類ごとにタブで切り替えられます。コマンドは「›」の順に入力します。</p>
+          <div class="tabs" data-tabs id="comboTabs">
+            <div class="tab-list" role="tablist" aria-label="コンボの分類"><button type="button" role="tab" class="tab-btn" id="tab-enders" aria-controls="combo-enders" aria-selected="false">締めパーツ<span class="count">2</span></button><button type="button" role="tab" class="tab-btn" id="tab-light" aria-controls="combo-light" aria-selected="false">小技始動<span class="count">2</span></button><button type="button" role="tab" class="tab-btn" id="tab-heavy" aria-controls="combo-heavy" aria-selected="false">強攻撃始動<span class="count">1</span></button><button type="button" role="tab" class="tab-btn" id="tab-punish" aria-controls="combo-punish" aria-selected="false">パニカン<span class="count">2</span></button><button type="button" role="tab" class="tab-btn" id="tab-impact" aria-controls="combo-impact" aria-selected="false">インパクト<span class="count">2</span></button><button type="button" role="tab" class="tab-btn" id="tab-sa_use" aria-controls="combo-sa_use" aria-selected="false">SAゲージ活用<span class="count">1</span></button></div>
+          <div class="tab-panel" role="tabpanel" id="combo-enders" aria-labelledby="tab-enders" hidden>
+            <p class="tab-desc">コンボ後半の締めルート。以降のコンボの最後に付ける。</p>
+            <div class="combo-list">
+              <article class="combo-card" id="cb-e1">
+                <div class="combo-top"><span class="combo-id">E1</span><h4 class="combo-recipe">弱巨腕締め</h4></div>
+                <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↘→+弱P 大義の巨腕</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→+P 追撃</span></div>
+                
+                <p class="combo-note">弱始動コンボの安定締め。初撃がヒットしていれば4Fで割られる心配がないので2段目まで出し切ってOK。</p>
+              </article>
+              <article class="combo-card" id="cb-e2">
+                <div class="combo-top"><span class="combo-id">E2</span><h4 class="combo-recipe">OD設置→岩肩締め</h4></div>
+                <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↙←+KK（OD）神気の巨巌</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↓↘+中P 厳酷な岩肩</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↓+強K 不撓の警衛</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">P 倫理の崩壊</span></div>
+                
+                <p class="combo-note">岩肩が岩に触れると過剰な正義に自動派生。使い勝手の良い締めで、多くの状況で使い回せる。</p>
+              </article>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="combo-light" aria-labelledby="tab-light" hidden>
+            <p class="tab-desc">差し合いや暴れ潰しで小技が当たった時のコンボ。</p>
+            <div class="combo-list">
+              <article class="combo-card" id="cb-l1">
+                <div class="combo-top"><span class="combo-id">L1</span><h4 class="combo-recipe">小技→弱巨腕</h4></div>
+                <div class="combo-cmd"><span class="cmd">↓弱K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓弱P ×2</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↘→+弱P 大義の巨腕</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→+P 追撃</span></div>
+                <div class="combo-stats"><span>始動 <b>↓弱K</b></span></div>
+                <p class="combo-note">テロップ：2小K→2小P×2→弱巨椀。</p>
+              </article>
+              <article class="combo-card" id="cb-l2">
+                <div class="combo-top"><span class="combo-id">L2</span><h4 class="combo-recipe">小技→CR→中Kターゲットコンボ</h4></div>
+                <div class="combo-cmd"><span class="cmd">↓弱K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓弱P ×2</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">CR（→→）</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓弱P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">中K &gt; 強K 規律の躍動</span></div>
+                <div class="combo-stats"><span>始動 <b>↓弱K</b></span></div>
+                <p class="combo-note">テロップ：2小K→2小P×2→CDR2小P→中Ktc（tcヒット後 密着+3）。投げと打撃の二択、後ろ下がりからシミーも可能。</p>
+              </article>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="combo-heavy" aria-labelledby="tab-heavy" hidden>
+            <p class="tab-desc">確定反撃や強攻撃ヒット時のコンボ。</p>
+            <div class="combo-list">
+              <article class="combo-card" id="cb-h1">
+                <div class="combo-top"><span class="combo-id">H1</span><h4 class="combo-recipe">ジャンプ強P始動</h4></div>
+                <div class="combo-cmd"><span class="cmd">（J）強P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓強P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↘→+PP（OD）大義の巨腕</span></div>
+                <div class="combo-stats"><span>始動 <b>（J）強P</b></span></div>
+                <p class="combo-note">ジャンプ攻撃は強Pが表裏両方に判定がありおすすめ。OD巨腕の後は強設置→強岩肩が、相手がジャンプで避けられない連携になる。</p>
+              </article>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="combo-punish" aria-labelledby="tab-punish" hidden>
+            <p class="tab-desc">パニッシュカウンター・確定反撃時の高火力コンボ。</p>
+            <div class="combo-list">
+              <article class="combo-card" id="cb-p1">
+                <div class="combo-top"><span class="combo-id">P1</span><h4 class="combo-recipe">無敵技ガード後</h4></div>
+                <div class="combo-cmd"><span class="cmd">↓↘→+強P 大義の巨腕</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓強K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↙←+KK（OD）神気の巨巌</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↓↘+中P 厳酷な岩肩</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↓+強K 不撓の警衛</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">P 倫理の崩壊</span></div>
+                <div class="combo-stats"><span>始動 <b>↓↘→+強P 大義の巨腕</b></span></div>
+                <p class="combo-note">テロップ：強巨椀→2強K→OD設置→中岩肩→不撓→派生→（画面端ならSA各種）。2強K以降は他の状況でも使い回せる。</p>
+              </article>
+              <article class="combo-card" id="cb-p2">
+                <div class="combo-top"><span class="combo-id">P2</span><h4 class="combo-recipe">無敵技ガード後（位置入れ替え）</h4></div>
+                <div class="combo-cmd"><span class="cmd">↓↘→+強P 大義の巨腕</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓強K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↙←+KK（OD）神気の巨巌</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↓↘+強P 厳酷な岩肩</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↓+強K 不撓の警衛</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">P 倫理の崩壊</span></div>
+                <div class="combo-stats"><span>始動 <b>↓↘→+強P 大義の巨腕</b></span></div>
+                <p class="combo-note">OD設置後の岩肩を強にすると画面位置を入れ替えられ、ダメージを取りつつ状況を好転できる。</p>
+              </article>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="combo-impact" aria-labelledby="tab-impact" hidden>
+            <p class="tab-desc">ドライブインパクトがヒットした時のコンボ。</p>
+            <div class="combo-list">
+              <article class="combo-card" id="cb-i1">
+                <div class="combo-top"><span class="combo-id">I1</span><h4 class="combo-recipe">インパクト（パニカン）</h4></div>
+                <div class="combo-cmd"><span class="cmd">インパクト（パニカン）</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">前ステップ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓強K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↙←+KK（OD）神気の巨巌</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↓↘+中P 厳酷な岩肩</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↓+強K 不撓の警衛</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">P 倫理の崩壊</span></div>
+                <div class="combo-stats"><span>始動 <b>インパクト（パニカン）</b></span></div>
+                <p class="combo-note">前ステップを1回挟む必要があるが、2強K以降は同じルート。</p>
+              </article>
+              <article class="combo-card" id="cb-i2">
+                <div class="combo-top"><span class="combo-id">I2</span><h4 class="combo-recipe">インパクト（壁ドン）</h4></div>
+                <div class="combo-cmd"><span class="cmd">インパクト（壁やられ）</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓強K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↙←+KK（OD）神気の巨巌</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↓↘+中P 厳酷な岩肩</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↓+強K 不撓の警衛</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">P 倫理の崩壊</span></div>
+                <div class="combo-stats"><span>始動 <b>インパクト（壁やられ）</b></span></div>
+                <p class="combo-note">2強K以降がまったく同じルートで締められる。</p>
+              </article>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="combo-sa_use" aria-labelledby="tab-sa_use" hidden>
+            <p class="tab-desc">SAゲージを使ってダメージを伸ばすコンボ。</p>
+            <div class="combo-list">
+              <article class="combo-card" id="cb-s1">
+                <div class="combo-top"><span class="combo-id">S1</span><h4 class="combo-recipe">画面端 SA締め</h4></div>
+                <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↙←+KK（OD）神気の巨巌</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↓↘+中P 厳酷な岩肩</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↓+強K 不撓の警衛</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">P 倫理の崩壊</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">SA1／SA2／SA3</span></div>
+                
+                <p class="combo-note">画面端が近い状況なら好きなSAで締められる。ゲージ状況に合わせて選択。</p>
+              </article>
+            </div>
+          </div>
+          </div>
+          <div class="callout">動画内で紹介なし：中攻撃始動／カウンター／SAゲージ回収</div>
+        </section>
+
+        <!-- ④ 生ラッシュ -->
+        <section class="doc-section reveal" id="rush">
+          <div class="sec-head"><span class="sec-no">04</span><h2 class="sec-title">よく使う生ラッシュ行動</h2><span class="sec-en">DRIVE RUSH</span></div>
+          <div class="table-wrap"><table class="data-table" style="min-width:780px">
+            <thead><tr><th style="width:56px">ID</th><th style="width:170px">行動</th><th>コマンド</th><th style="width:120px">有利F</th><th>摘要</th></tr></thead>
+            <tbody><tr><td class="num">R1</td><td><b>ラッシュしゃがみ中K→コマ投げ</b></td><td><span class="cmd">ラッシュ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓中K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓中P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">前ステップ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↘↓↙←+P 鬼気迫る尋問</span></td><td class="num"><span style="color:var(--text-dim)">—</span></td><td>しゃがみ中Pで相手を転ばせ、前ステップからコマ投げが重なる。中P重ね→弱巨腕（連続ガード）の打撃択もある。</td></tr><tr><td class="num">R2</td><td><b>ラッシュしゃがみ中K→中Kターゲットコンボ</b></td><td><span class="cmd">ラッシュ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓中K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">中K &gt; 強K 規律の躍動</span></td><td class="num"><span>ヒット後 密着+3</span></td><td>小技CRルートと同じ強い状況に持っていける。</td></tr></tbody>
+          </table></div>
+        </section>
+
+        <!-- ⑤ セットプレイ -->
+        <section class="doc-section reveal" id="setplay">
+          <div class="sec-head"><span class="sec-no">05</span><h2 class="sec-title">セットプレイ・起き攻め</h2><span class="sec-en">SET PLAY</span></div>
+          <p>起点（締めや状況）ごとに、その後の行動・有利フレーム・重ねる技をまとめています。</p>
+          <div class="table-wrap"><table class="data-table" style="min-width:1100px">
+            <thead><tr><th style="width:56px">ID</th><th style="width:190px">起点（締め）</th><th style="width:170px">その後の行動</th><th style="width:230px">コマンド</th><th style="width:120px">有利F</th><th style="width:140px">重ね技</th><th>摘要</th></tr></thead>
+            <tbody><tr><td class="num">K1</td><td>中Kターゲットコンボ（規律の躍動）ヒット</td><td>密着+3から二択</td><td><span class="cmd">投げ／打撃／後ろ下がり（シミー）</span></td><td class="num"><span>+3（密着）</span></td><td>—</td><td>投げと打撃の二択を迫りつつ、後ろ下がりからシミーもできる。</td></tr><tr><td class="num">K2</td><td>ラッシュしゃがみ中K→しゃがみ中P（ダウン）</td><td>前ステップでコマ投げ重ね</td><td><span class="cmd">前ステップ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↘↓↙←+P 鬼気迫る尋問 or 中P重ね</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↘→+弱P 大義の巨腕</span></td><td class="num"><span style="color:var(--text-dim)">（数値表記なし）</span></td><td>コマ投げ／中P</td><td>中P重ね→弱巨腕は連続ガード。</td></tr><tr><td class="num">K3</td><td>OD大義の巨腕（J強P始動）</td><td>強設置→強岩肩</td><td><span class="cmd">↓↘→+PP（OD）大義の巨腕</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓↙←+強K 神気の巨巌</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↓↘+強P 厳酷な岩肩</span></td><td class="num"><span style="color:var(--text-dim)">（数値表記なし）</span></td><td>岩投げ</td><td>相手がジャンプで避けられない連携。</td></tr><tr><td class="num">K4</td><td>岩設置（神気の巨巌）</td><td>突進から岩を投げる</td><td><span class="cmd">↓↙←+K 神気の巨巌</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→↓↘+P 厳酷な岩肩</span></td><td class="num"><span style="color:var(--text-dim)">（数値表記なし）</span></td><td>—</td><td>ヒットで大ダメージ、ガードでも1500〜1800程度の白ダメージ。</td></tr></tbody>
+          </table></div>
+          <div class="callout">「数値表記なし」は動画内で有利Fが示されていない連携です。トレーニングモードのフレームメーターで計測して追記してください。</div>
+        </section>
+
+        <!-- ⑥ 出典・用語 -->
+        <section class="doc-section reveal" id="source">
+          <div class="sec-head"><span class="sec-no">06</span><h2 class="sec-title">出典・用語</h2><span class="sec-en">SOURCE</span></div>
+          <p>このページの内容は、以下の解説動画の内容を整理したものです（クラシック）。技コマンドはCAPCOM公式コマンドリスト（クラシック）で確認しています。</p>
+          <div class="info-grid">
+            <a class="info-card" data-accent="pink" href="https://www.youtube.com/watch?v=qq9aIEXK9pI" target="_blank" rel="noopener">
+              <p class="info-label">YOUTUBE ／ 9:51</p>
+              <p class="info-title">【スト6】アルジュン最速攻略！必殺技・コンボ・立ち回りを実装初日にまとめて解説</p>
+              <p>投稿者：レンコンチャンネル</p>
+            </a>
+          </div>
+          <h3>動画内用語</h3>
+          <div class="table-wrap"><table class="data-table" style="min-width:0">
+            <thead><tr><th>用語</th><th>意味</th></tr></thead>
+            <tbody><tr><td><b>白ダメージ</b></td><td>ガード時などに受ける回復可能なダメージ。アルジュンは大量に与えられ、コマ投げや打撃で回収する。</td></tr><tr><td><b>巨腕</b></td><td>大義の巨腕（↓↘→+P）。動画テロップでは「巨椀」。</td></tr><tr><td><b>岩肩</b></td><td>厳酷な岩肩（→↓↘+P）。岩に触れると過剰な正義に派生。</td></tr><tr><td><b>設置</b></td><td>神気の巨巌（↓↙←+K）。岩を設置する。</td></tr><tr><td><b>不撓</b></td><td>不撓の警衛（↓↓+強K）。当て身。派生は倫理の崩壊（P）。</td></tr><tr><td><b>中Ktc</b></td><td>中K &gt; 強K のターゲットコンボ（規律の躍動）。</td></tr><tr><td><b>CDR</b></td><td>キャンセルドライブラッシュ。</td></tr><tr><td><b>シミー</b></td><td>後ろに下がって相手の投げを空振りさせ反撃すること。</td></tr></tbody>
+          </table></div>
+          <h3>摘要（字幕・補足）</h3>
+          <ul class="list"><li>実装初日（10月13日）の解説動画のため、セットプレイなどは今後開発が進む可能性がある。投稿者はクラシックのみで検証。</li><li>息吹の円筒はガイルのソニックブレイドやエドのサイコシュートに似た技。追加入力で派生が変わり、強度で発射角度が変わる。相手の弾と相殺すると派生攻撃が出せなくなる。</li><li>神気の巨巌はJPのトリグラフやC.ヴァイパーのセービングのような性能。強度で攻撃位置が変わり、長押しで出現タイミングをずらせる。</li><li>厳酷な岩肩は弱・中だとガード-4で反撃あり。強はアルジュン有利だが投げ間合い外になる。</li><li>アーマーブレイクのDIも反撃（不撓の警衛）。</li><li>中攻撃始動・カウンター始動・SAゲージ回収の専用コンボは動画内で紹介なし。</li></ul>
+        </section>
+
+        <nav class="page-pager" aria-label="前後のページ">
+          <a href="character-yasmin.html" class="pager-link"><small>← PREV</small><span>ヤスミン</span></a>
+          <a href="#combos" class="pager-link pager-link--next"><small>JUMP →</small><span>コンボを見る</span></a>
+        </nav>
+      </article>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-logo">SF6 攻略ガイド</p>
+    <p class="footer-note">本サイトは非公式のファンサイトです。ゲーム内の名称・データの権利は各権利者に帰属します。</p>
+  </footer>
+
+  <script src="../script.js?v=20261010"></script>
+</body>
+</html>

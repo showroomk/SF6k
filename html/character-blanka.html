@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ブランカ（キャラクター詳細） | SF6 攻略ガイド</title>
-  <meta name="description" content="ブランカの立ち回り方針、技コマンド、コンボ、生ラッシュ、セットプレイ（有利フレーム・重ね技）。">
+  <meta name="description" content="ブランカの立ち回り方針、技コマンド、コンボ、リフト後の締め選択、生ラッシュ、セットプレイ（有利フレーム・重ね技・持続引き中K）。">
   <meta name="theme-color" content="#050508">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +64,7 @@
 
   <main class="main" id="main">
 
-    <!-- データ元：sf6-pdf/data/blanka.json（ブランカ 立ち回り＆コンボ資料） -->
+    <!-- データ元：sf6-pdf/data/blanka.json（ブランカ 立ち回り＆コンボ資料）＋ ACQUA「コンボ選択＆起き攻め」解説（JG7O_STzLPY） -->
     <section class="chara-hero">
       <div>
         <nav class="breadcrumb reveal" aria-label="パンくずリスト">
@@ -77,7 +77,7 @@
         <div class="chara-stats reveal">
           <div class="chara-stat"><small>TYPE</small><b>セットプレイ</b></div>
           <div class="chara-stat"><small>DIFFICULTY</small><b>やや低め</b><div class="meter" aria-label="難易度 5段階中2"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></div>
-          <div class="chara-stat"><small>DATA</small><b>コンボ8・連携6</b></div>
+          <div class="chara-stat"><small>DATA</small><b>コンボ13・連携14</b></div>
         </div>
       </div>
       <!-- 画像の位置・フェードは style の値で調整できます -->
@@ -93,6 +93,7 @@
             <li><a href="#overview">概要・立ち回り方針</a></li>
             <li><a href="#moves">技・コマンド</a></li>
             <li><a href="#combos">コンボ</a></li>
+            <li><a href="#lift">リフト後の締め選択</a></li>
             <li><a href="#rush">生ラッシュ行動</a></li>
             <li><a href="#setplay">セットプレイ・起き攻め</a></li>
             <li><a href="#source">出典・用語</a></li>
@@ -115,9 +116,11 @@
           <ul class="list"><li>バーチカルローリング（↓溜め↑+K）／OD版は無敵対空・切り返し。</li><li>クラシックでは溜め→上入力が必要で、しゃがみ連打はできない（モダンの利点）。</li></ul>
           <h3>画面端</h3>
           <ul class="list"><li>画面端に追い込んでコンボやインパクトから強P（リフト）→人形設置が勝ちパターン。中央のやり取りはすべてこのため。</li><li>人形設置（+5）→ 投げ連打でも強い。基本は ←+中K（4F暴れも潰せる）→ OD電撃 → 中段 or 歩いて中足 の二択。どちらも人形の電撃で連続ガード／パリィ不可の状況になる。</li><li>崩した後：強バックステップローリング → ODローリングアタック → 弱バーチカル → ODバーチカル で約4000。</li></ul>
+          <h3>起き攻め</h3>
+          <ul class="list"><li>リフト後の締めは基本「大足（+8）」、ゲージに余裕があれば「リバラン→ラッシュ起き攻め」。詳しくは<a href="#lift">リフト後の締め選択</a>。</li><li>起き攻めの柱はラッシュ起き攻めと持続引き中K重ねの2本。引き中Kはガードされても+7で、歩き投げかシミーの二重の択がかかる。</li></ul>
           <div class="pros-cons">
-            <div class="pros"><h4>強み</h4><ul class="list"><li>反撃のない必殺技（ローリングアタック・エレクトリックサンダー）。</li><li>しゃがみ中Pのリーチと持続。</li><li>ラッシュ中段は発生20Fでゲーム最速クラス。強攻撃なのでコンボが伸び、ガードされても+1で投げ間合い。</li><li>画面端の人形セットプレイが最強クラス。</li><li>中央の投げ後の攻めが全キャラで最も強い部類。</li><li>モダンのアシストコンボが優秀（中アシストでSA1まで3140、始動技はガード+2）。</li></ul></div>
-            <div class="cons"><h4>弱み</h4><ul class="list"><li>人形セットプレイは奥が深く、全部を使いこなすには研究が必要。</li><li>クラシックの無敵技は溜めが必要で、ガードを解かずに連打はできない。</li><li>中央でのコンボダメージは「おまけ」程度で、画面端に運べないと崩しが弱い。</li></ul></div>
+            <div class="pros"><h4>強み</h4><ul class="list"><li>反撃のない必殺技（ローリングアタック・エレクトリックサンダー）。</li><li>しゃがみ中Pのリーチと持続。</li><li>ラッシュ中段は発生20Fでゲーム最速クラス。強攻撃なのでコンボが伸び、ガードされても+1で投げ間合い。</li><li>画面端の人形セットプレイが最強クラス。</li><li>中央の投げ後の攻めが全キャラで最も強い部類。</li><li>モダンのアシストコンボが優秀（中アシストでSA1まで3140、始動技はガード+2）。</li><li>通常技が「見た目どおりに」長い。判定で勝つタイプではなく相手に触れるほど長いので、ガードさせやすい（シュート談）。</li><li>入れ込んで確定反撃をもらう必殺技がない。これは超大事（シュート談）。</li><li>SA2（ライトニングビースト）が最強クラス。効果時間が長く、こちらがずっと有利なまま相手のゲージを削れる。画面端で発動すると技が全部強化され、セットプレイも強くなる。</li><li>対空が強い。判定が強く遅めに出しても間に合い、落とす位置によって表裏が変わる。</li></ul></div>
+            <div class="cons"><h4>弱み</h4><ul class="list"><li>人形セットプレイは奥が深く、全部を使いこなすには研究が必要。</li><li>クラシックの無敵技は溜めが必要で、ガードを解かずに連打はできない。</li><li>中央でのコンボダメージは「おまけ」程度で、画面端に運べないと崩しが弱い。</li><li>追いかける展開（リードされている時）が苦手。触りに行ってカウンターを取りコンボ、という技に乏しい（シュート談）。</li><li>無敵技が下溜めのバーチカルローリング。ただし溜め技は突進中などに簡単に出せる利点もある。</li><li>ブランカミラーは互いにローリング待ちになり、自然と動かなくなりがち。</li></ul></div>
           </div>
         </section>
 
@@ -127,7 +130,7 @@
           <p>公式コマンドリストで確認したコマンドです。（溜め）＝溜め入力、一回転＝レバー1回転。</p>
           <div class="table-wrap"><table class="data-table">
             <thead><tr><th>技名</th><th>コマンド</th><th>備考</th></tr></thead>
-            <tbody><tr><td><b>エレクトリックサンダー</b></td><td><span class="cmd">↓↙←+P</span></td><td>—</td></tr><tr><td><b>ローリングアタック</b></td><td><span class="cmd">←(溜め)→+P</span></td><td>空中版エリアルローリングあり</td></tr><tr><td><b>バーチカルローリング</b></td><td><span class="cmd">↓(溜め)↑+K</span></td><td>—</td></tr><tr><td><b>バックステップローリング</b></td><td><span class="cmd">→↘↓↙←+K</span></td><td>—</td></tr><tr><td><b>ワイルドハント</b></td><td><span class="cmd">↓↘→+K</span></td><td>近距離で</td></tr><tr><td><b>ブランカちゃん爆弾</b></td><td><span class="cmd">↓↓+P</span></td><td>—</td></tr><tr><td><b>SA1 シャウトオブアース</b></td><td><span class="cmd">↓↘→↓↘→+P</span></td><td>—</td></tr><tr><td><b>SA2 ライトニングビースト</b></td><td><span class="cmd">↓↙←↓↙←+P</span></td><td>—</td></tr><tr><td><b>SA3 グランドシェイブキャノンボール</b></td><td><span class="cmd">↓↘→↓↘→+K</span></td><td>体力25%以下で性能アップ</td></tr><tr><td><b>ロッククラッシュ</b></td><td><span class="cmd">→+中P</span></td><td>—</td></tr><tr><td><b>ダブルニーボンバー</b></td><td><span class="cmd">→+中K</span></td><td>—</td></tr><tr><td><b>ワイルドエッジ</b></td><td><span class="cmd">←+中K</span></td><td>—</td></tr><tr><td><b>ワイルドネイル</b></td><td><span class="cmd">→+強P</span></td><td>—</td></tr><tr><td><b>アマゾンリバーラン</b></td><td><span class="cmd">↘+強P</span></td><td>—</td></tr><tr><td><b>フィアーダウン</b></td><td><span class="cmd">↓+PP</span></td><td>P:ワイルドリフト／K:レイドジャンプ</td></tr><tr><td><b>サプライズフォワード</b></td><td><span class="cmd">→+KKK</span></td><td>—</td></tr><tr><td><b>サプライズバック</b></td><td><span class="cmd">←+KKK</span></td><td>—</td></tr><tr><td><b>ワイルドファング</b></td><td><span class="cmd">N or →+弱P弱K</span></td><td>通常投げ</td></tr><tr><td><b>ジャングルフリップ</b></td><td><span class="cmd">←+弱P弱K</span></td><td>通常投げ</td></tr></tbody>
+            <tbody><tr><td><b>エレクトリックサンダー</b></td><td><span class="cmd">↓↙←+P</span></td><td>—</td></tr><tr><td><b>ローリングアタック</b></td><td><span class="cmd">←(溜め)→+P</span></td><td>空中版エリアルローリングあり（動画内「ロリ」）</td></tr><tr><td><b>バーチカルローリング</b></td><td><span class="cmd">↓(溜め)↑+K</span></td><td>動画内「バチカ」</td></tr><tr><td><b>バックステップローリング</b></td><td><span class="cmd">→↘↓↙←+K</span></td><td>—</td></tr><tr><td><b>ワイルドハント</b></td><td><span class="cmd">↓↘→+K</span></td><td>近距離で</td></tr><tr><td><b>ブランカちゃん爆弾</b></td><td><span class="cmd">↓↓+P</span></td><td>—</td></tr><tr><td><b>SA1 シャウトオブアース</b></td><td><span class="cmd">↓↘→↓↘→+P</span></td><td>—</td></tr><tr><td><b>SA2 ライトニングビースト</b></td><td><span class="cmd">↓↙←↓↙←+P</span></td><td>—</td></tr><tr><td><b>SA3 グランドシェイブキャノンボール</b></td><td><span class="cmd">↓↘→↓↘→+K</span></td><td>体力25%以下で性能アップ</td></tr><tr><td><b>ロッククラッシュ</b></td><td><span class="cmd">→+中P</span></td><td>—</td></tr><tr><td><b>ダブルニーボンバー</b></td><td><span class="cmd">→+中K</span></td><td>—</td></tr><tr><td><b>ワイルドエッジ</b></td><td><span class="cmd">←+中K</span></td><td>動画内「引き中K」。持続重ねが起き攻めの柱</td></tr><tr><td><b>ワイルドネイル</b></td><td><span class="cmd">→+強P</span></td><td>—</td></tr><tr><td><b>アマゾンリバーラン</b></td><td><span class="cmd">↘+強P</span></td><td>動画内「リバラン」</td></tr><tr><td><b>フィアーダウン</b></td><td><span class="cmd">↓+PP</span></td><td>P:ワイルドリフト／K:レイドジャンプ</td></tr><tr><td><b>サプライズフォワード</b></td><td><span class="cmd">→+KKK</span></td><td>動画内「サプ」</td></tr><tr><td><b>サプライズバック</b></td><td><span class="cmd">←+KKK</span></td><td>—</td></tr><tr><td><b>ワイルドファング</b></td><td><span class="cmd">N or →+弱P弱K</span></td><td>通常投げ</td></tr><tr><td><b>ジャングルフリップ</b></td><td><span class="cmd">←+弱P弱K</span></td><td>通常投げ</td></tr></tbody>
           </table></div>
         </section>
 
@@ -137,7 +140,7 @@
 
           <p>始動技の種類ごとにタブで切り替えられます。コマンドは「›」の順に入力します。</p>
           <div class="tabs" data-tabs id="comboTabs">
-            <div class="tab-list" role="tablist" aria-label="コンボの分類"><button type="button" role="tab" class="tab-btn" id="tab-enders" aria-controls="combo-enders" aria-selected="false">締めパーツ<span class="count">2</span></button><button type="button" role="tab" class="tab-btn" id="tab-light" aria-controls="combo-light" aria-selected="false">小技始動<span class="count">1</span></button><button type="button" role="tab" class="tab-btn" id="tab-medium" aria-controls="combo-medium" aria-selected="false">中攻撃始動<span class="count">2</span></button><button type="button" role="tab" class="tab-btn" id="tab-heavy" aria-controls="combo-heavy" aria-selected="false">強攻撃始動<span class="count">1</span></button><button type="button" role="tab" class="tab-btn" id="tab-impact" aria-controls="combo-impact" aria-selected="false">インパクト<span class="count">1</span></button><button type="button" role="tab" class="tab-btn" id="tab-sa_use" aria-controls="combo-sa_use" aria-selected="false">SAゲージ活用<span class="count">1</span></button></div>
+            <div class="tab-list" role="tablist" aria-label="コンボの分類"><button type="button" role="tab" class="tab-btn" id="tab-enders" aria-controls="combo-enders" aria-selected="false">締めパーツ<span class="count">7</span></button><button type="button" role="tab" class="tab-btn" id="tab-light" aria-controls="combo-light" aria-selected="false">小技始動<span class="count">1</span></button><button type="button" role="tab" class="tab-btn" id="tab-medium" aria-controls="combo-medium" aria-selected="false">中攻撃始動<span class="count">2</span></button><button type="button" role="tab" class="tab-btn" id="tab-heavy" aria-controls="combo-heavy" aria-selected="false">強攻撃始動<span class="count">1</span></button><button type="button" role="tab" class="tab-btn" id="tab-impact" aria-controls="combo-impact" aria-selected="false">インパクト<span class="count">1</span></button><button type="button" role="tab" class="tab-btn" id="tab-sa_use" aria-controls="combo-sa_use" aria-selected="false">SAゲージ活用<span class="count">1</span></button></div>
           <div class="tab-panel" role="tabpanel" id="combo-enders" aria-labelledby="tab-enders" hidden>
             <p class="tab-desc">コンボ後半の締めルート。以降のコンボの最後に付ける。</p>
             <div class="combo-list">
@@ -152,6 +155,36 @@
                 <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">強P（リフト）</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓(溜め)↑+弱K バーチカルローリング</span></div>
                 
                 <p class="combo-note">中央の基本締め。その後サプライズフォワード→投げ／後ろで様子見。</p>
+              </article>
+              <article class="combo-card" id="cb-e3">
+                <div class="combo-top"><span class="combo-id">E3</span><h4 class="combo-recipe">大足締め（基本・一番安定）</h4></div>
+                <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">リフト</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓強K（大足）</span></div>
+                <div class="combo-stats"><span>有利 <b>+8</b></span><span>投げ間合い <b>内</b></span></div>
+                <p class="combo-note">後ろ受け身にも投げが届き、引き中Kが重なる。ゲージを使わないので、キャンセルラッシュでゲージを使ったコンボはこれで締める。→ <a href="#lift">締め選択</a></p>
+              </article>
+              <article class="combo-card" id="cb-e4">
+                <div class="combo-top"><span class="combo-id">E4</span><h4 class="combo-recipe">リバラン締め（ラッシュ起き攻め用）</h4></div>
+                <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">リフト</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↘+強P アマゾンリバーラン</span></div>
+                <div class="combo-stats"><span>有利 <b>4種で最大</b></span></div>
+                <p class="combo-note">大足よりダメージが高く、ラッシュ中段・ラッシュ下段・ラッシュ投げ・シミー・遅らせキックを選べる。パニカンや飛びが通った後などゲージに余裕がある時に。</p>
+              </article>
+              <article class="combo-card" id="cb-e5">
+                <div class="combo-top"><span class="combo-id">E5</span><h4 class="combo-recipe">中バチカ→中ロリ（運び・ダメージ重視）</h4></div>
+                <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">リフト</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓(溜め)↑+中K バーチカルローリング</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">←(溜め)→+中P ローリングアタック</span></div>
+                <div class="combo-stats"><span>有利 <b>+3</b></span><span>位置 <b>密着</b></span></div>
+                <p class="combo-note">ダメージが高く画面も運べるが、起き攻めは4種で一番弱い。引き中Kを重ねると4F技に負け、重ねられるのは小技だけ。ACQUAはほぼ使わない。</p>
+              </article>
+              <article class="combo-card" id="cb-e6">
+                <div class="combo-top"><span class="combo-id">E6</span><h4 class="combo-recipe">弱バチカ→サプ</h4></div>
+                <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">リフト</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓(溜め)↑+弱K バーチカルローリング</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→+KKK サプライズフォワード</span></div>
+                <div class="combo-stats"><span>有利 <b>+11</b></span><span>投げ間合い <b>外</b></span></div>
+                <p class="combo-note">歩き投げ・その場シミーはできるが、しゃがみの相手に引き中Kが重ならず打撃択が強Kしかない。強Kはガードされると攻めが終わる。</p>
+              </article>
+              <article class="combo-card" id="cb-e7">
+                <div class="combo-top"><span class="combo-id">E7</span><h4 class="combo-recipe">中バチカ→弱ロリ（相手が画面端近くの時だけ）</h4></div>
+                <div class="combo-cmd"><span class="cmd">…</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">リフト</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">↓(溜め)↑+中K バーチカルローリング</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">←(溜め)→+弱P ローリングアタック</span></div>
+                <div class="combo-stats"><span>有利 <b>+13</b></span></div>
+                <p class="combo-note">画面端近くだけの例外で、ブランカに一番都合のいい+13F。引き中Kの再持続が重なり、ガードで+7、ヒットなら大Pが繋がる。</p>
               </article>
             </div>
           </div>
@@ -220,44 +253,94 @@
           <div class="callout">動画内で紹介なし：カウンター／パニカン／SAゲージ回収</div>
         </section>
 
-        <!-- ④ 生ラッシュ -->
+        <!-- ④ リフト後の締め選択 -->
+        <section class="doc-section reveal" id="lift">
+          <div class="sec-head"><span class="sec-no">04</span><h2 class="sec-title">リフト後の締め選択</h2><span class="sec-en">ENDER CHOICE</span></div>
+          <p>コンボ中のリフト（ワイルドリフト）の後は4種類の締めがあり、「どれを使えばいいか」が一番よく聞かれるポイント。<b>結論：実用は大足締めとリバラン締めの2つでだいたいOK。</b></p>
+          <div class="table-wrap"><table class="data-table" style="min-width:860px">
+            <thead><tr><th style="width:56px">ID</th><th style="width:170px">締め</th><th style="width:96px">有利F</th><th style="width:120px">投げ間合い</th><th>起き攻めでできること</th><th style="width:110px">評価</th></tr></thead>
+            <tbody><tr><td class="num"><a href="#cb-e3">E3</a></td><td><b>大足</b></td><td class="num">+8</td><td>内（後ろ受け身にも届く）</td><td>引き中K重ね／シミー／後ろ歩きシミー／垂直ジャンプで投げ抜け狩り</td><td><b>基本</b>：一番安定・簡単</td></tr><tr><td class="num"><a href="#cb-e4">E4</a></td><td><b>リバラン</b></td><td class="num">4種で最大</td><td>—</td><td>ラッシュ中段／ラッシュ下段／ラッシュ投げ／シミー／遅らせキック</td><td><b>ゲージに余裕がある時</b></td></tr><tr><td class="num"><a href="#cb-e6">E6</a></td><td>弱バチカ→サプ</td><td class="num">+11</td><td>外</td><td>歩き投げ／その場シミー。しゃがみ相手に引き中Kが重ならず、打撃択は強Kだけ</td><td>大足の方が展開を作れる</td></tr><tr><td class="num"><a href="#cb-e5">E5</a></td><td>中バチカ→中ロリ</td><td class="num">+3</td><td>密着</td><td>重ねられるのは小技のみ。引き中Kは4F技に負け、シミー・後ろ歩き・垂直は間に合わない</td><td>起き攻め最弱（ほぼ使わない）</td></tr></tbody>
+          </table></div>
+
+          <h3>使い分けの結論</h3>
+          <ol class="step-list">
+            <li><span><b>迷ったら大足締め。</b>ゲージを使わず+8で、引き中K重ねからの起き攻めが一番安定する。</span></li>
+            <li><span><b>キャンセルラッシュを使ったコンボは大足締め。</b>すでにドライブゲージを3本使っているので、リバラン→ラッシュ起き攻めに行くとゲージが苦しい。</span></li>
+            <li><span><b>パニカン始動・飛びが通った後など、ゲージに余裕がある時はリバラン締め。</b>大足からでもラッシュ起き攻めはできるが、ダメージはリバランの方が高い。</span></li>
+            <li><span><b>自分が画面端を背負ってリフトが当たったら、リバラン→最速サプ。</b>裏に回って位置を入れ替えられる。</span></li>
+            <li><span><b>相手が画面端近くの時だけ、中バチカ→弱ロリ。</b>+13Fになり、引き中Kの再持続が重なる最強の状況。</span></li>
+          </ol>
+
+          <h3>起き攻めの2本柱</h3>
+          <div class="pros-cons">
+            <div class="pros"><h4>ラッシュ起き攻め</h4><ul class="list"><li>ラッシュ中段は発生が早く見づらい。ラッシュ下段・ラッシュ投げとの択になる。</li><li>ラッシュできる（ゲージがある）時はこちら。</li><li>ガードされても、もう一度ラッシュから択をかけ直せる。</li></ul></div>
+            <div class="pros"><h4>持続引き中K重ね</h4><ul class="list"><li>引き中K（←+中K）を持続で重ねる。ガードされても+7、ヒットなら持続なので大Pが繋がる。</li><li>ラッシュできない時はこちら。</li><li>画面端の電撃（エレクトリックサンダー）の後なども同じ形で持続が重なる。</li></ul></div>
+          </div>
+          <p>この2つは同じくらい強く、いろいろな場所から使い分けられるとブランカのキャラパワーを引き出せる。なお、ブランカの起き攻めで一番強いのは画面端の人形（<a href="#setplay">セットプレイ K1</a>）。</p>
+          <div class="callout">2025年11月時点のフレーム・コンボに基づく内容です。アップデートで有利Fが変わっている可能性があるので、トレーニングモードのフレームメーターで確認してください。</div>
+        </section>
+
+        <!-- ⑤ 生ラッシュ -->
         <section class="doc-section reveal" id="rush">
-          <div class="sec-head"><span class="sec-no">04</span><h2 class="sec-title">よく使う生ラッシュ行動</h2><span class="sec-en">DRIVE RUSH</span></div>
+          <div class="sec-head"><span class="sec-no">05</span><h2 class="sec-title">よく使う生ラッシュ行動</h2><span class="sec-en">DRIVE RUSH</span></div>
           <div class="table-wrap"><table class="data-table" style="min-width:780px">
             <thead><tr><th style="width:56px">ID</th><th style="width:170px">行動</th><th>コマンド</th><th style="width:120px">有利F</th><th>摘要</th></tr></thead>
-            <tbody><tr><td class="num">R1</td><td><b>ラッシュ中段</b></td><td><span class="cmd">ラッシュ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→+中P ロッククラッシュ（中段）</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">強攻撃</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">コンボ</span></td><td class="num"><span>ガード+1（投げ間合い）</span></td><td>発生20Fのゲーム最速中段。後に強攻撃が繋がる。</td></tr><tr><td class="num">R2</td><td><b>投げ→ラッシュ中段</b></td><td><span class="cmd">投げ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">ラッシュ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">中段</span></td><td class="num"><span style="color:var(--text-dim)">—</span></td><td>重なれば4F暴れにも勝つ（タイミングがシビア）。下段択もある。</td></tr></tbody>
+            <tbody><tr><td class="num">R1</td><td><b>ラッシュ中段</b></td><td><span class="cmd">ラッシュ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→+中P ロッククラッシュ（中段）</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">強攻撃</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">コンボ</span></td><td class="num"><span>ガード+1（投げ間合い）</span></td><td>発生20Fのゲーム最速中段。後に強攻撃が繋がる。</td></tr><tr><td class="num">R2</td><td><b>投げ→ラッシュ中段</b></td><td><span class="cmd">投げ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">ラッシュ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">中段</span></td><td class="num"><span style="color:var(--text-dim)">—</span></td><td>重なれば4F暴れにも勝つ（タイミングがシビア）。下段択もある。</td></tr><tr><td class="num">R3</td><td><b>ラッシュ→引き中K</b></td><td><span class="cmd">ラッシュ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">←+中K ワイルドエッジ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">少し下がって↓（シミー）／投げ</span></td><td class="num"><span style="color:var(--text-dim)">—</span></td><td>ラッシュの慣性で滑って投げ間合い内になる。シミーするなら少し下がってからしゃがむ。</td></tr></tbody>
           </table></div>
         </section>
 
-        <!-- ⑤ セットプレイ -->
+        <!-- ⑥ セットプレイ -->
         <section class="doc-section reveal" id="setplay">
-          <div class="sec-head"><span class="sec-no">05</span><h2 class="sec-title">セットプレイ・起き攻め</h2><span class="sec-en">SET PLAY</span></div>
+          <div class="sec-head"><span class="sec-no">06</span><h2 class="sec-title">セットプレイ・起き攻め</h2><span class="sec-en">SET PLAY</span></div>
           <p>起点（締めや状況）ごとに、その後の行動・有利フレーム・重ねる技をまとめています。</p>
           <div class="table-wrap"><table class="data-table" style="min-width:1100px">
             <thead><tr><th style="width:56px">ID</th><th style="width:190px">起点（締め）</th><th style="width:170px">その後の行動</th><th style="width:230px">コマンド</th><th style="width:120px">有利F</th><th style="width:140px">重ね技</th><th>摘要</th></tr></thead>
-            <tbody><tr><td class="num">K1</td><td>画面端 強P（リフト）→人形設置</td><td>ワイルドエッジ→OD電撃→中下二択</td><td><span class="cmd">↓↓+P 人形</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">←+中K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">OD ↓↙←+P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">中段 or 歩いて↓中K</span></td><td class="num"><span>人形設置後 +5</span></td><td>←+中K（暴れ潰し）</td><td>電撃が人形に当たって跳ね、連続ガードかつパリィ不可の中下二択になる。中足は最速だと人形が繋がらないので少し遅らせる。</td></tr><tr><td class="num">K2</td><td>人形設置</td><td>投げ連打</td><td><span class="cmd">人形</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">投げ</span></td><td class="num"><span>+5</span></td><td>—</td><td>最速投げで暴れも潰せる。</td></tr><tr><td class="num">K3</td><td>中央で投げ</td><td>サプライズフォワード</td><td><span class="cmd">投げ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→+KKK サプライズフォワード</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">弱P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">エレクトリックサンダー／歩いて投げ／中足→電撃</span></td><td class="num"><span>+3</span></td><td>立ち弱P</td><td>弱P→電撃で暴れ・ジャンプを潰す。実質中央でも柔道。</td></tr><tr><td class="num">K4</td><td>強人形設置</td><td>安全飛び</td><td><span class="cmd">↓↓+強P 人形</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">垂直ジャンプ攻撃</span></td><td class="num"><span style="color:var(--text-dim)">（数値表記なし）</span></td><td>ジャンプ攻撃</td><td>強で置くと遠くへ行き画面端では戻ってくる。安全飛びになり、ジャストパリィされても投げ間合い外。</td></tr></tbody>
+            <tbody><tr><td class="num">K1</td><td>画面端 強P（リフト）→人形設置</td><td>ワイルドエッジ→OD電撃→中下二択</td><td><span class="cmd">↓↓+P 人形</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">←+中K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">OD ↓↙←+P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">中段 or 歩いて↓中K</span></td><td class="num"><span>人形設置後 +5</span></td><td>←+中K（暴れ潰し）</td><td>電撃が人形に当たって跳ね、連続ガードかつパリィ不可の中下二択になる。中足は最速だと人形が繋がらないので少し遅らせる。</td></tr><tr><td class="num">K2</td><td>人形設置</td><td>投げ連打</td><td><span class="cmd">人形</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">投げ</span></td><td class="num"><span>+5</span></td><td>—</td><td>最速投げで暴れも潰せる。</td></tr><tr><td class="num">K3</td><td>中央で投げ</td><td>サプライズフォワード</td><td><span class="cmd">投げ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→+KKK サプライズフォワード</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">弱P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">エレクトリックサンダー／歩いて投げ／中足→電撃</span></td><td class="num"><span>+3</span></td><td>立ち弱P</td><td>弱P→電撃で暴れ・ジャンプを潰す。実質中央でも柔道。</td></tr><tr><td class="num">K4</td><td>強人形設置</td><td>安全飛び</td><td><span class="cmd">↓↓+強P 人形</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">垂直ジャンプ攻撃</span></td><td class="num"><span style="color:var(--text-dim)">（数値表記なし）</span></td><td>ジャンプ攻撃</td><td>強で置くと遠くへ行き画面端では戻ってくる。安全飛びになり、ジャストパリィされても投げ間合い外。</td></tr><tr><td class="num">K5</td><td>リフト→大足締め</td><td>持続引き中K重ね／シミー</td><td><span class="cmd">↓強K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">←+中K（持続重ね）</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">投げ／シミー</span></td><td class="num"><span>+8</span></td><td>←+中K</td><td>投げ間合い内で後ろ受け身にも投げが届く。シミー・後ろ歩きシミー・垂直ジャンプで投げ抜けを狩れる。</td></tr><tr><td class="num">K6</td><td>リフト→リバラン締め</td><td>ラッシュ起き攻め</td><td><span class="cmd">↘+強P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">ラッシュ</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">中段／下段／投げ／シミー／遅らせキック</span></td><td class="num"><span>4種で最大</span></td><td>ラッシュ中段・下段</td><td>ゲージに余裕がある時の締め。大足締めよりダメージが高い。</td></tr><tr><td class="num">K7</td><td>自分が画面端付近でリフト</td><td>リバラン→最速サプで入れ替え</td><td><span class="cmd">↘+強P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">最速 →+KKK</span></td><td class="num"><span style="color:var(--text-dim)">（数値表記なし）</span></td><td>—</td><td>サプで裏回りして画面位置を入れ替える。端を背負ってリフトが当たったら基本これ。</td></tr><tr><td class="num">K8</td><td>相手が画面端近くでリフト</td><td>中バチカ→弱ロリ→引き中K再持続</td><td><span class="cmd">↓(溜め)↑+中K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">←(溜め)→+弱P</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">←+中K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">歩き投げ</span></td><td class="num"><span>+13</span></td><td>←+中K（再持続）</td><td>ガードさせて+7。その後の歩き投げは4F技でも割られない。ヒットなら持続なので大Pが繋がる。</td></tr><tr><td class="num">K9</td><td>リフト→弱バチカ→サプ</td><td>歩き投げ／その場シミー／強K</td><td><span class="cmd">↓(溜め)↑+弱K</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">→+KKK</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">歩き投げ／シミー／強K</span></td><td class="num"><span>+11</span></td><td>強K</td><td>投げ間合い外。強Kがバックステップ・バックジャンプに当たれば大Pが繋がるが、ガードされると攻めが終わる。</td></tr><tr><td class="num">K10</td><td>持続引き中K（ガード）</td><td>歩き投げ／その場でシミー</td><td><span class="cmd">←+中K（ガード）</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">少し歩いて投げ／↓で待ち</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">投げ抜けに強P</span></td><td class="num"><span>+7</span></td><td>—</td><td>通常キャラにはギリギリ投げ間合い外なので、ほんの少し歩いて投げる。投げ抜けが見えたら大Pが一番痛い。</td></tr><tr><td class="num">K11</td><td>起き攻め全般</td><td>二重の択</td><td><span class="cmd">①引き中K重ね／重ねると見せて投げ／シミー</span><span class="arrow" aria-hidden="true">›</span><span class="cmd">②（ガード後）歩き投げ／シミー</span></td><td class="num"><span style="color:var(--text-dim)">—</span></td><td>←+中K</td><td>1回目の択をガードされても+7から2回目の択がかかる。無敵技のないキャラに特に通りやすい。</td></tr></tbody>
           </table></div>
           <div class="callout">「数値表記なし」は動画内で有利Fが示されていない連携です。トレーニングモードのフレームメーターで計測して追記してください。</div>
+
+          <h3>状況別 起き攻めの起点一覧（MR2100ブランカ解説）</h3>
+          <p>oかかさん（マスター ブランカ MR2130）の解説動画で、起き攻めが紹介されている起点の一覧です。レシピは動画内テロップで解説されているので、時刻のリンクから該当箇所を確認してください。</p>
+          <div class="table-wrap"><table class="data-table" style="min-width:640px">
+            <thead><tr><th style="width:56px">ID</th><th style="width:190px">起点</th><th>このページの関連項目</th><th style="width:96px">動画</th></tr></thead>
+            <tbody><tr><td class="num">O1</td><td>エレク（電撃）ヒット後</td><td>起き攻めコンボはここから。画面端の電撃後は持続引き中K（K11）と同じ形</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=83s" target="_blank" rel="noopener">1:23</a></td></tr><tr><td class="num">O2</td><td>投げ後</td><td>中央：サプライズフォワード +3（K3）</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=234s" target="_blank" rel="noopener">3:54</a></td></tr><tr><td class="num">O3</td><td>リフト→中バチカ</td><td>→中ロリ +3（E5）／端近くは→弱ロリ +13（E7・K8）</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=375s" target="_blank" rel="noopener">6:15</a></td></tr><tr><td class="num">O4</td><td>リフト→弱バチカ</td><td>→サプ +11（E6・K9）</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=437s" target="_blank" rel="noopener">7:17</a></td></tr><tr><td class="num">O5</td><td>リフト→しゃがみ大K</td><td>大足締め +8（E3・K5）</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=507s" target="_blank" rel="noopener">8:27</a></td></tr><tr><td class="num">O6</td><td>リフト→アマリバ</td><td>リバラン締め→ラッシュ起き攻め（E4・K6）</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=540s" target="_blank" rel="noopener">9:00</a></td></tr><tr><td class="num">O7</td><td>リフト→SA1</td><td>—</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=601s" target="_blank" rel="noopener">10:01</a></td></tr><tr><td class="num">O8</td><td>リフト→SA3</td><td>—</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=630s" target="_blank" rel="noopener">10:30</a></td></tr><tr><td class="num">O9</td><td>持続エレク</td><td>電撃を持続で重ねた後の展開</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=672s" target="_blank" rel="noopener">11:12</a></td></tr><tr><td class="num">O10</td><td>インパクト</td><td>画面端インパクト→リフト→人形（I1）</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=740s" target="_blank" rel="noopener">12:20</a></td></tr><tr><td class="num">O11</td><td>しゃがみ大P</td><td>—</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=798s" target="_blank" rel="noopener">13:18</a></td></tr><tr><td class="num">O12</td><td>コマ投げ（ワイルドハント）</td><td>—</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=820s" target="_blank" rel="noopener">13:40</a></td></tr><tr><td class="num">O13</td><td>ODバチカ後</td><td>無敵技で切り返した後の起き攻め</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=871s" target="_blank" rel="noopener">14:31</a></td></tr><tr><td class="num">O14</td><td>Dリバ後</td><td>ドライブリバーサル後の起き攻め</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=897s" target="_blank" rel="noopener">14:57</a></td></tr><tr><td class="num">O15</td><td>エリアル（エリアルローリング）ヒット後</td><td>—</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=916s" target="_blank" rel="noopener">15:16</a></td></tr><tr><td class="num">O16</td><td>入れ替え</td><td>リバラン→最速サプ（K7）</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=950s" target="_blank" rel="noopener">15:50</a></td></tr><tr><td class="num">O17</td><td>画面端コンボなど</td><td>人形セットプレイ（K1・K2）</td><td class="num"><a href="https://www.youtube.com/watch?v=l_aZgMkq8Gs&amp;t=978s" target="_blank" rel="noopener">16:18</a></td></tr></tbody>
+          </table></div>
+          <p>動画の冒頭では、起き攻めを理解するためのテクニック「詐欺飛び」「遅らせグラップ」「持続当て」「五分うち」も解説されています（用語は<a href="#source">出典・用語</a>を参照）。</p>
         </section>
 
-        <!-- ⑥ 出典・用語 -->
+        <!-- ⑦ 出典・用語 -->
         <section class="doc-section reveal" id="source">
-          <div class="sec-head"><span class="sec-no">06</span><h2 class="sec-title">出典・用語</h2><span class="sec-en">SOURCE</span></div>
-          <p>このページの内容は、以下の解説動画の内容を整理したものです（クラシック（前半はモダン解説））。技コマンドはCAPCOM公式コマンドリスト（クラシック）で確認しています。</p>
+          <div class="sec-head"><span class="sec-no">07</span><h2 class="sec-title">出典・用語</h2><span class="sec-en">SOURCE</span></div>
+          <p>このページの内容は、以下の解説動画の内容を整理したものです（クラシック（前半はモダン解説））。「リフト後の締め選択」と締めパーツ E3〜E7・連携 R3／K5〜K11 は2本目の動画（2025年11月投稿）、強み・弱みの「シュート談」は3本目、起き攻めの起点一覧 O1〜O17 は4本目の動画が出典です。技コマンドはCAPCOM公式コマンドリスト（クラシック）で確認しています。</p>
           <div class="info-grid">
             <a class="info-card" data-accent="pink" href="https://www.youtube.com/watch?v=HdVx6-v94Uc" target="_blank" rel="noopener">
               <p class="info-label">YOUTUBE ／ 17:52</p>
               <p class="info-title">【スト6】初心者にもおすすめ！今日から使える「ブランカ」の最強行動・セットプレイ徹底解説 // ACQUA × ハメコ。</p>
               <p>投稿者：SmashlogTV - SF6（解説：ACQUA）</p>
             </a>
+            <a class="info-card" data-accent="cyan" href="https://www.youtube.com/watch?v=JG7O_STzLPY" target="_blank" rel="noopener">
+              <p class="info-label">YOUTUBE ／ 12:38</p>
+              <p class="info-title">【スト6、SF6】ブランカのめちゃくちゃ聞かれるコンボ選択＆起き攻めを解説！</p>
+              <p>投稿者：ACQUA</p>
+            </a>
+            <a class="info-card" data-accent="yellow" href="https://www.youtube.com/watch?v=gTr9wArMgzs" target="_blank" rel="noopener">
+              <p class="info-label">YOUTUBE ／ 9:21</p>
+              <p class="info-title">【スト6】実際に触ってみて分かった！シュートが思うブランカの強みとは？【シュート/ブランカ】</p>
+              <p>投稿者：しゅーとチャンネル / Shuto</p>
+            </a>
+            <a class="info-card" data-accent="pink" href="https://www.youtube.com/watch?v=l_aZgMkq8Gs" target="_blank" rel="noopener">
+              <p class="info-label">YOUTUBE ／ 17:15</p>
+              <p class="info-title">【ブランカ解説！初心者～GRAND MASTER向け】MR2100ブランカが使っているコンボ&amp;起き攻めまとめ！練習法つき！YEAR4版【スト6】</p>
+              <p>投稿者：oかか</p>
+            </a>
           </div>
           <h3>動画内用語</h3>
           <div class="table-wrap"><table class="data-table" style="min-width:0">
             <thead><tr><th>用語</th><th>意味</th></tr></thead>
-            <tbody><tr><td><b>人形</b></td><td>ブランカちゃん爆弾（↓↓+P）。設置して電撃で跳ねさせる。</td></tr><tr><td><b>リフト</b></td><td>相手を浮かせる強P（人形設置前の打ち上げ）。</td></tr><tr><td><b>OD電撃</b></td><td>ODエレクトリックサンダー。</td></tr><tr><td><b>バチカ</b></td><td>バーチカルローリング。</td></tr><tr><td><b>サプライズフォワード</b></td><td>→+KKKで前に移動する特殊行動。</td></tr><tr><td><b>ラッシュ中段</b></td><td>ドライブラッシュから出す中段技。</td></tr><tr><td><b>安全飛び</b></td><td>無敵技を出されても着地ガードが間に合うジャンプ攻撃。</td></tr></tbody>
+            <tbody><tr><td><b>人形</b></td><td>ブランカちゃん爆弾（↓↓+P）。設置して電撃で跳ねさせる。</td></tr><tr><td><b>リフト</b></td><td>相手を浮かせる強P（人形設置前の打ち上げ）。</td></tr><tr><td><b>OD電撃</b></td><td>ODエレクトリックサンダー。</td></tr><tr><td><b>バチカ</b></td><td>バーチカルローリング。</td></tr><tr><td><b>サプライズフォワード</b></td><td>→+KKKで前に移動する特殊行動。</td></tr><tr><td><b>ラッシュ中段</b></td><td>ドライブラッシュから出す中段技。</td></tr><tr><td><b>安全飛び</b></td><td>無敵技を出されても着地ガードが間に合うジャンプ攻撃。</td></tr><tr><td><b>大足</b></td><td>しゃがみ強K（↓強K）。</td></tr><tr><td><b>大P</b></td><td>強P。</td></tr><tr><td><b>リバラン</b></td><td>アマゾンリバーラン（↘+強P）。</td></tr><tr><td><b>中ロリ／弱ロリ</b></td><td>中／弱ローリングアタック（←溜め→+P）。</td></tr><tr><td><b>サプ</b></td><td>サプライズフォワード（→+KKK）。</td></tr><tr><td><b>引き中K</b></td><td>ワイルドエッジ（←+中K）。</td></tr><tr><td><b>持続重ね</b></td><td>技の持続（攻撃判定が出続ける後半）を起き上がりに重ねること。有利が増え、ヒット時は後の技が繋がりやすい。</td></tr><tr><td><b>再持続</b></td><td>引き中Kの2回目の持続部分が重なる状態。</td></tr><tr><td><b>シミー</b></td><td>投げを見せて下がる／しゃがむなどして、相手の投げ抜け（投げ）の空振りを狩る行動。</td></tr><tr><td><b>歩き投げ</b></td><td>少し前に歩いて投げ間合いに入ってから投げること。</td></tr><tr><td><b>エレク／アマリバ</b></td><td>エレクトリックサンダー／アマゾンリバーラン（oかか動画での呼び方）。</td></tr><tr><td><b>詐欺飛び</b></td><td>安全飛びと同じ。相手の無敵技にはガードが間に合い、それ以外にはジャンプ攻撃が当たるタイミングで飛ぶこと。</td></tr><tr><td><b>遅らせグラップ</b></td><td>少し遅らせて投げを入力し、打撃にはガード、投げには投げ抜けで対応する防御テクニック。</td></tr><tr><td><b>持続当て</b></td><td>技の持続部分を当てて、有利フレームを増やすこと（持続重ねと同じ考え方）。</td></tr><tr><td><b>五分うち</b></td><td>有利／不利が0Fの状況で、どちらが先に動くかの読み合い。</td></tr><tr><td><b>Dリバ</b></td><td>ドライブリバーサル。</td></tr></tbody>
           </table></div>
           <h3>摘要（字幕・補足）</h3>
-          <ul class="list"><li>モダン解説：弱・中・強アシストコンボがすべて優秀。弱は4F始動で自動ヒット確認。中アシストはジャンプ攻撃から中連打で3140（SA1込み）、始動技はガードで+2で、2段目からでもヒット確認してくれる。</li><li>モダン初心者の勝ち方：攻めはジャンプ→中アシストコンボ、守りはしゃがんでアシスト＋必殺連打でOD バーチカル（無敵）。</li><li>ラッシュ中段はVer.1では+2だったが調整で+1に。</li><li>人形は弱で置くと手前、強で置くと遠くへ。研究が進行中で新しいセットプレイが次々生まれている。</li></ul>
+          <ul class="list"><li>モダン解説：弱・中・強アシストコンボがすべて優秀。弱は4F始動で自動ヒット確認。中アシストはジャンプ攻撃から中連打で3140（SA1込み）、始動技はガードで+2で、2段目からでもヒット確認してくれる。</li><li>モダン初心者の勝ち方：攻めはジャンプ→中アシストコンボ、守りはしゃがんでアシスト＋必殺連打でOD バーチカル（無敵）。</li><li>ラッシュ中段はVer.1では+2だったが調整で+1に。</li><li>人形は弱で置くと手前、強で置くと遠くへ。研究が進行中で新しいセットプレイが次々生まれている。</li><li>（2本目）リフト後の締めは「中バチカ→中ロリ」「弱バチカ→サプ」「大足」「リバラン」の4種類。実用は大足とリバランで、起き攻めはラッシュか持続引き中Kの2本柱。人形とSA2が絡む連携は「宇宙」（奥が深すぎる）と概要欄でコメントされている。</li><li>（3本目・2024年4月）シュートは、ラッシュ中段が発生20Fでガード+2だった当時、「投げとシミーの択がかけやすい唯一のキャラ」と評価していた。現在は調整で+1。中央の投げ後に打撃が重なる「中央柔道」も唯一無二と評価。</li><li>（4本目）oかか動画はナレーションなしのテロップ解説。起き攻めの各レシピとフレームは動画内で確認してください。</li></ul>
         </section>
 
         <nav class="page-pager" aria-label="前後のページ">

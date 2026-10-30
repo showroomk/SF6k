@@ -529,9 +529,17 @@
         if (e.key === 'ArrowLeft') select((i - 1 + btns.length) % btns.length, true, true);
       });
     });
-    // URLのハッシュでタブを直接開く（例 #combo-corner）
-    const fromHash = btns.findIndex(b => `#${b.getAttribute('aria-controls')}` === location.hash);
+    // URLのハッシュでタブを直接開く（例 #combo-corner、タブ内のカード #cb-e3 も可）
+    const panelIndexFor = hash => {
+      const target = hash.length > 1 && document.getElementById(decodeURIComponent(hash.slice(1)));
+      return target ? panels.findIndex(p => p.contains(target)) : -1;
+    };
+    const fromHash = panelIndexFor(location.hash);
     select(fromHash >= 0 ? fromHash : 0);
+    window.addEventListener('hashchange', () => {
+      const i = panelIndexFor(location.hash);
+      if (i >= 0) { select(i); document.getElementById(decodeURIComponent(location.hash.slice(1))).scrollIntoView(); }
+    });
   });
 })();
 
